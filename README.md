@@ -12,6 +12,12 @@ cdk-events-notify is an AWS CDK construct library that provides you know who log
 ### Now support 
 - Line Notify
 
+
+# You need Line Notify access token
+> more see [line notify docs](https://notify-bot.line.me/doc/en/) 
+
+![](./images/access-token.png)
+
 ## Usage 
 ```ts
 import * as cdk from '@aws-cdk/core';
@@ -30,6 +36,16 @@ cdk deploy
 ```bash
 cdk destroy
 ```
+### Finally
+![](./images/line-chat.jpg)
+
+### Overview 
+![](./images/overview.png)
+
+## More about EventBridge and Lambda
+- [EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html)
+- [Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
+> Note: Event Bridge can not cross region , if you console sign in not the cdk-events-notify region will not get the evnet in cloudtrail see this [docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/cloudtrail-integration.html#cloudtrail-integration_signin-regions)
 
 ## :clap:  Supporters
 [![Stargazers repo roster for @guan840912/cdk-events-notify](https://reporoster.com/stars/guan840912/cdk-events-notify)](https://github.com/guan840912/cdk-events-notify/stargazers)
