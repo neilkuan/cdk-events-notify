@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary, GithubWorkflow } = require('projen');
+const { AwsCdkConstructLibrary } = require('projen');
 
 const PROJECT_NAME = 'cdk-events-notify';
 const PROJECT_DESCRIPTION = 'The Events Notify AWS Construct lib for AWS CDK';
@@ -7,7 +7,7 @@ const AUTOMATION_TOKEN = 'AUTOMATION_GITHUB_TOKEN';
 const project = new AwsCdkConstructLibrary({
   authorAddress: 'guan840912@gmail.com',
   authorName: 'Neil Kuan',
-  cdkVersion: '1.74.0',
+  cdkVersion: '1.75.0',
   description: PROJECT_DESCRIPTION,
   name: PROJECT_NAME,
   repository: 'https://github.com/guan840912/cdk-events-notify.git',
@@ -36,7 +36,7 @@ const project = new AwsCdkConstructLibrary({
 });
 
 // create a custom projen and yarn upgrade workflow
-const workflow = new GithubWorkflow(project, 'ProjenYarnUpgrade');
+workflow = project.github.addWorkflow('ProjenYarnUpgrade');
 
 workflow.on({
   schedule: [{
