@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.30 (2020-12-24)
+
+
+### Features
+
+* line notify handler ([2b6e936](https://github.com/guan840912/cdk-events-notify/commit/2b6e9366291723f2dd4da87092806ac475945e33))
+
 ### 0.1.29 (2020-12-23)
 
 
