@@ -4390,11 +4390,6 @@ jsii-reflect@^1.16.0:
     oo-ascii-tree "^1.16.0"
     yargs "^16.1.1"
 
-jsii-release@^0.1.6:
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/jsii-release/-/jsii-release-0.1.10.tgz#7344a37daca79906f4a65c3c53764a3326df3776"
-  integrity sha512-uX+S7FHnB+IDuTGGZBpOwLO+BJjfHWpggj11YiY73oy7b8Y6PSVUmVR+ZLSb8TdpmXMAVyWakLNv4p88WLczHg==
-
 jsii-rosetta@^1.16.0:
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-1.16.0.tgz#d042dccdad3942809c32468e97fe9f5b18ce8105"
@@ -5429,10 +5424,10 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.14.6:
-  version "0.14.6"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.14.6.tgz#8caf006c607b0e2b79b42191be008be18d03d9ea"
-  integrity sha512-PgNnyvwERJwWD7SyG01R2n0MyXwS3mUZaVR3txzyT3kuzH+9rxLu9T8FT/FrmFqlxe4+9sU2GKWdti0ZwCBBLw==
+projen@^0.16.1:
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.16.1.tgz#bae97818baab133b673f05e7cd8ead72c71bbe30"
+  integrity sha512-ZL9i9n73ctgMZPcyq01k6pn+CIrn0ZQ9mv3pJNuukAWYd9R4X/rafiRG4SsOotU4WT3O/+BDTzWiiyfi3y5Pug==
   dependencies:
     "@iarna/toml" "^2.2.5"
     chalk "^4.1.0"
