@@ -2,7 +2,7 @@
   "dependencies": [
     {
       "name": "@aws-cdk/assert",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "build"
     },
     {
@@ -89,33 +89,37 @@
       "type": "build"
     },
     {
+      "name": "projen-automate-it",
+      "type": "bundled"
+    },
+    {
       "name": "@aws-cdk/aws-events-targets",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-events",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-logs",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "peer"
     },
     {
@@ -125,32 +129,36 @@
     },
     {
       "name": "@aws-cdk/aws-events-targets",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-events",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-logs",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.80.0",
+      "version": "^1.94.1",
+      "type": "runtime"
+    },
+    {
+      "name": "projen-automate-it",
       "type": "runtime"
     }
   ],
