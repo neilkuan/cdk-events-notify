@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.52](https://github.com/guan840912/cdk-events-notify/compare/v0.1.50...v0.1.52) (2021-03-29)
+
 ### [0.1.51](https://github.com/guan840912/cdk-events-notify/compare/v0.1.30...v0.1.51) (2021-03-28)
 
 ### [0.1.50](https://github.com/guan840912/cdk-events-notify/compare/v0.1.49...v0.1.50) (2021-03-21)
