@@ -20,6 +20,7 @@ TOKEN = os.environ['LINE_NOTIFY_TOKEN']
 #  EncryptionContext={
 #    'LambdaFunctionName': os.environ['AWS_LAMBDA_FUNCTION_NAME']
 #    })['Plaintext'].decode('utf-8')
+# example console login event https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-service-event.html#eb-console-event-type
 
 def lineNotifyMessage(token, msg):
     prepayload = {'message': msg}

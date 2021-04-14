@@ -1,0 +1,34 @@
+{
+  "id": "6f87d04b-9f74-4f04-a780-7acf4b0a9b38",
+  "detail-type": "AWS Console Sign In via CloudTrail",
+  "source": "aws.signin",
+  "account": "123456789012",
+  "time": "2016-01-05T18:21:27Z",
+  "region": "us-east-1",
+  "resources": [],
+  "detail": { 
+      "eventVersion": "1.02",
+      "userIdentity": {
+            "type": "Root",
+            "principalId": "123456789012",
+            "arn": "arn:aws:iam::123456789012:root",
+            "accountId": "123456789012"
+            },
+      "eventTime": "2016-01-05T18:21:27Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "0.0.0.0",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36",
+      "requestParameters": null,
+      "responseElements": {
+            "ConsoleLogin": "Success"
+            },
+      "additionalEventData": {
+            "LoginTo": "https://console.aws.amazon.com/console/home?state=hashArgs%23&isauthcode=true",
+            "MobileVersion": "No",
+            "MFAUsed": "No" },
+      "eventID": "324731c0-64b3-4421-b552-dfc3c27df4f6",
+      "eventType": "AwsConsoleSignIn"
+      }
+}
