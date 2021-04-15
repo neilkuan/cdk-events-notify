@@ -8,7 +8,7 @@ const AUTOMATION_TOKEN = 'AUTOMATION_GITHUB_TOKEN';
 const project = new AwsCdkConstructLibrary({
   authorAddress: 'guan840912@gmail.com',
   authorName: 'Neil Kuan',
-  cdkVersion: '1.96.0',
+  cdkVersion: '1.98.0',
   description: PROJECT_DESCRIPTION,
   name: PROJECT_NAME,
   repository: 'https://github.com/guan840912/cdk-events-notify.git',
