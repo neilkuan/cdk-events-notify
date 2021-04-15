@@ -9,7 +9,7 @@
 # cdk-events-notify
 cdk-events-notify is an AWS CDK construct library that provides you know who login in your aws console. 
 ## Welcome to contribute another event notify case you want.
-### Now support 
+### Now support
 - Line Notify
 
 
