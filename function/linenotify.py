@@ -51,7 +51,7 @@ def lambda_handler(event, context):
     source_ip = event['detail']['sourceIPAddress']
     user_name = event['detail']['userIdentity']['arn']
     account_id = event['account']
-    msg = "\n" + "Login Log" + "\n" + "Event :" + event_name + "\n" + "Account ID : " + account_id + "\n" + "Resion : " + region + "\n" + "User Name : " + user_name + "\n" + "Source IP : " + source_ip
+    msg = "\n" + "Login Log" + "\n" + "Event Name :" + event_name + "\n" + "Account ID : " + account_id + "\n" + "Region : " + region + "\n" + "User Name : " + user_name + "\n" + "Source IP : " + source_ip
     
     
     lineNotifyMessage(TOKEN, msg)
