@@ -21,11 +21,11 @@ cdk-events-notify is an AWS CDK construct library that provides you know who log
 ## Usage 
 ```ts
 import * as cdk from '@aws-cdk/core';
-import { EeventNotify } from 'cdk-events-notify';
+import { EventNotify } from 'cdk-events-notify';
 
 const app = new cdk.App();
 const stack = new cdk.Stack(app, 'integ-stack', { env });
-new EeventNotify(stack, 'LineEeventNotify', { lineNotifyToken: process.env.LINE_NOTIFY_TOKEN });
+new EventNotify(stack, 'LineEventNotify', { lineNotifyToken: process.env.LINE_NOTIFY_TOKEN });
 
 ```
 ### To deploy

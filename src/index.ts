@@ -12,7 +12,7 @@ export interface EventNotifyProps {
   readonly lineNotifyToken?: string;
 }
 
-export class EeventNotify extends cdk.Construct {
+export class EventNotify extends cdk.Construct {
   constructor(scope: cdk.Construct, id: string, props?: EventNotifyProps) {
     super(scope, id);
 

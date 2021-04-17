@@ -1,5 +1,5 @@
 import * as cdk from '@aws-cdk/core';
-import { EeventNotify } from './';
+import { EventNotify } from './';
 
 
 export class IntegTesting {
@@ -14,7 +14,7 @@ export class IntegTesting {
 
     const stack = new cdk.Stack(app, 'integ-stack', { env });
 
-    new EeventNotify(stack, 'LineEeventNotify');
+    new EventNotify(stack, 'LineEventNotify');
 
     this.stack = [stack];
   }

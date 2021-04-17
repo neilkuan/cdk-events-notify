@@ -4,7 +4,7 @@
 
 Name|Description
 ----|-----------
-[EeventNotify](#cdk-events-notify-eeventnotify)|*No description*
+[EventNotify](#cdk-events-notify-eventnotify)|*No description*
 
 
 **Structs**
@@ -15,7 +15,7 @@ Name|Description
 
 
 
-## class EeventNotify 🔹 <a id="cdk-events-notify-eeventnotify"></a>
+## class EventNotify 🔹 <a id="cdk-events-notify-eventnotify"></a>
 
 
 
@@ -28,7 +28,7 @@ __Extends__: [Construct](#aws-cdk-core-construct)
 
 
 ```ts
-new EeventNotify(scope: Construct, id: string, props?: EventNotifyProps)
+new EventNotify(scope: Construct, id: string, props?: EventNotifyProps)
 ```
 
 * **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
