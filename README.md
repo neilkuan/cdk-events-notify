@@ -11,8 +11,11 @@ cdk-events-notify is an AWS CDK construct library that provides you know who log
 ## Welcome to contribute another event notify case you want.
 ### Now support
 - Line Notify
+- Slack ([webhooks](https://api.slack.com/messaging/webhooks#posting_with_webhooks))
 
-
+## You need enable one `Management events` in your account.
+> more see https://aws.amazon.com/tw/cloudtrail/pricing/
+![](./images/management-events.png)
 # You need Line Notify access token
 > more see [line notify docs](https://notify-bot.line.me/doc/en/) 
 
@@ -37,8 +40,10 @@ cdk deploy
 cdk destroy
 ```
 ### Finally
-![](./images/line-chat.jpg)
-
+- line
+  ![](./images/line-chat.jpg)
+- slack
+  ![](./images/slack.jpg)
 ### Overview 
 ![](./images/overview.png)
 

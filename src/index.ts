@@ -5,20 +5,36 @@ import * as _lambda from '@aws-cdk/aws-lambda';
 import * as logs from '@aws-cdk/aws-logs';
 import * as cdk from '@aws-cdk/core';
 
+export interface ISlackEventNotify {
+  /**
+   * slack Webhook Url for Lambda send message to slack.
+   */
+  readonly slackWebhookUrl: string;
+  /**
+   * slack Channel Name for Lambda send message to slack.
+   */
+  readonly slackChannelName: string;
+
+}
+
 export interface EventNotifyProps {
   /**
    * Line Notify Token for Lambda send notify permisson.
    */
-  readonly lineNotifyToken?: string;
+  readonly lineNotifyToken?: string | undefined;
+
+  /**
+   * Notify target to Slack channel.
+   */
+  readonly slack?: ISlackEventNotify;
 }
 
 export class EventNotify extends cdk.Construct {
   constructor(scope: cdk.Construct, id: string, props?: EventNotifyProps) {
     super(scope, id);
 
-    const lineNotifyToken = props?.lineNotifyToken ?? (this.node.tryGetContext('LINE_NOTIFY_TOKEN') || process.env.LINE_NOTIFY_TOKEN);
-    if (!lineNotifyToken) {
-      throw new Error('missing LINE_NOTIFY_TOKEN in the context variable');
+    if (!props?.lineNotifyToken && !props?.slack) {
+      throw new Error('Please input lineNotifyToken or slack options');
     }
 
     const lambdaFun = new _lambda.Function(this, 'lambda_fun', {
@@ -28,7 +44,9 @@ export class EventNotify extends cdk.Construct {
       timeout: cdk.Duration.minutes(3),
       logRetention: logs.RetentionDays.THREE_DAYS,
       environment: {
-        LINE_NOTIFY_TOKEN: lineNotifyToken,
+        LINE_NOTIFY_TOKEN: props?.lineNotifyToken ? props?.lineNotifyToken : 'none',
+        SLACK_WEBHOOK_URL: props?.slack?.slackWebhookUrl ? props?.slack?.slackWebhookUrl : 'none',
+        SLACK_CHANNEL_NAME: props?.slack?.slackChannelName ? props?.slack?.slackChannelName : 'none',
       },
     });
 
