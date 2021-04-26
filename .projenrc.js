@@ -23,7 +23,7 @@ const project = new AwsCdkConstructLibrary({
   ],
   catalog: {
     twitter: 'neil_kuan',
-    announce: true,
+    announce: false,
   },
   compat: true,
   python: {
