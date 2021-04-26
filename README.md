@@ -7,7 +7,7 @@
 ![PyPI](https://img.shields.io/pypi/dm/cdk-events-notify?label=pypi&color=blue)
 
 # cdk-events-notify
-cdk-events-notify is an AWS CDK construct library that provides you know who login in your aws console. 
+cdk-events-notify is an AWS CDK Construct Library that provides you know who login in your aws console. 
 ## Welcome to contribute another event notify case you want.
 ### Now support
 - Line Notify
