@@ -3,7 +3,7 @@
   "description": "The Events Notify AWS Construct lib for AWS CDK",
   "repository": {
     "type": "git",
-    "url": "https://github.com/guan840912/cdk-events-notify.git"
+    "url": "https://github.com/neilkuan/cdk-events-notify.git"
   },
   "scripts": {
     "clobber": "npx projen clobber",

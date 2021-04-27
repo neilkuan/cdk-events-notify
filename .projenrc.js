@@ -11,7 +11,7 @@ const project = new AwsCdkConstructLibrary({
   cdkVersion: '1.98.0',
   description: PROJECT_DESCRIPTION,
   name: PROJECT_NAME,
-  repository: 'https://github.com/guan840912/cdk-events-notify.git',
+  repository: 'https://github.com/neilkuan/cdk-events-notify.git',
   keywords: ['aws', 'cdk', 'events', 'notify'],
   cdkDependencies: [
     '@aws-cdk/core',
