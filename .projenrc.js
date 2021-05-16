@@ -1,5 +1,5 @@
-const { Automation } = require('projen-automate-it');
 const { AwsCdkConstructLibrary } = require('projen');
+const { Automation } = require('projen-automate-it');
 
 const PROJECT_NAME = 'cdk-events-notify';
 const PROJECT_DESCRIPTION = 'The Events Notify AWS Construct lib for AWS CDK';
