@@ -1,6 +1,6 @@
 import * as path from 'path';
-import * as target from '@aws-cdk/aws-events-targets';
 import * as events from '@aws-cdk/aws-events';
+import * as target from '@aws-cdk/aws-events-targets';
 import * as _lambda from '@aws-cdk/aws-lambda';
 import * as logs from '@aws-cdk/aws-logs';
 import * as cdk from '@aws-cdk/core';
