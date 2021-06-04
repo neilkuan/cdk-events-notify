@@ -2,8 +2,6 @@ const { AwsCdkConstructLibrary } = require('projen');
 
 const PROJECT_NAME = 'cdk-events-notify';
 const PROJECT_DESCRIPTION = 'The Events Notify AWS Construct lib for AWS CDK';
-const AUTOMATION_TOKEN = 'AUTOMATION_GITHUB_TOKEN';
-
 const project = new AwsCdkConstructLibrary({
   authorAddress: 'guan840912@gmail.com',
   authorName: 'Neil Kuan',
@@ -20,9 +18,12 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-events',
     '@aws-cdk/aws-events-targets',
   ],
+  autoApproveOptions: {
+    secret: 'PROJEN_GITHUB_TOKEN',
+  },
   catalog: {
     twitter: 'neil_kuan',
-    announce: false,
+    announce: true,
   },
   compat: true,
   python: {
@@ -32,10 +33,7 @@ const project = new AwsCdkConstructLibrary({
   stability: 'experimental',
   defaultReleaseBranch: 'main',
   dependabot: false,
-  releaseBranches: ['main'],
   rebuildBot: false,
-  deps: ['projen-automate-it'],
-  bundledDeps: ['projen-automate-it'],
 });
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log', 'coverage', '.env', '.DS_Store'];

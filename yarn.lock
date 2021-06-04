@@ -6301,35 +6301,10 @@ progress@^2.0.0, progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen-automate-it@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/projen-automate-it/-/projen-automate-it-0.0.9.tgz#8bcb96c8186d570b2f70135a0dc4330768616514"
-  integrity sha512-QF7Vrecp5ZlNB6HXP3m3fIerIPDaHvosgIHvquR4xfJ866YNbmkl4XCa6dIHe4M1yhIBDCRo8irLzrbAGcx22Q==
-  dependencies:
-    projen "^0.17"
-
-projen@^0.17:
-  version "0.17.95"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.17.95.tgz#c24f33a091f8dc0a3e84a694bf49164455372b45"
-  integrity sha512-PyBAYREMuR9YRs6J+DKmcbMbGBuhAtIY9TGItp+n0x0kGSk4VI+uRfE49YlyJVrhJ0FWhGqr9FFXR+YbKO1IxQ==
-  dependencies:
-    "@iarna/toml" "^2.2.5"
-    chalk "^4.1.1"
-    decamelize "^4.0.0"
-    fs-extra "^9.1.0"
-    glob "^7"
-    ini "^2.0.0"
-    inquirer "^7.3.3"
-    semver "^7.3.5"
-    shx "^0.3.3"
-    xmlbuilder2 "^2.4.1"
-    yaml "^1.10.2"
-    yargs "^16.2.0"
-
-projen@^0.18.5:
-  version "0.18.5"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.18.5.tgz#1d140ad612fdd3225158dc33ba520dc28678b6de"
-  integrity sha512-35US9AmsJ7UuPtlpxSjT3+iWFuvJWjvP5+3BsOwJ2Hf86bxUm7L+F3Jac+ko5HCR4jwXxgBQO5H3fMSWq6Qbaw==
+projen@^0.22.0:
+  version "0.22.0"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.22.0.tgz#24c9c2fa3a87eae61361324b8ca8f868971efffb"
+  integrity sha512-5ZQ8uI4cER1PELvJwUPoAd3/4PF7TILerDEj4V7qzbCF3UaDeEb25/rbtxl/iniGCnEFe0ZI5jaqJSkEXl0TZA==
   dependencies:
     "@iarna/toml" "^2.2.5"
     chalk "^4.1.1"
