@@ -1,4 +1,4 @@
-const { AwsCdkConstructLibrary } = require('projen');
+const { AwsCdkConstructLibrary, DependenciesUpgradeMechanism } = require('projen');
 
 const PROJECT_NAME = 'cdk-events-notify';
 const PROJECT_DESCRIPTION = 'The Events Notify AWS Construct lib for AWS CDK';
@@ -18,8 +18,16 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-events',
     '@aws-cdk/aws-events-targets',
   ],
+  autoDetectBin: false,
+  depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
+    workflowOptions: {
+      labels: ['auto-approve'],
+      secret: 'AUTOMATION_GITHUB_TOKEN',
+    },
+  }),
   autoApproveOptions: {
-    secret: 'PROJEN_GITHUB_TOKEN',
+    secret: 'GITHUB_TOKEN',
+    allowedUsernames: ['neilkuan'],
   },
   catalog: {
     twitter: 'neil_kuan',
@@ -32,7 +40,6 @@ const project = new AwsCdkConstructLibrary({
   },
   stability: 'experimental',
   defaultReleaseBranch: 'main',
-  dependabot: false,
   rebuildBot: false,
 });
 
