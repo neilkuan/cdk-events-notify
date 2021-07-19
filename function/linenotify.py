@@ -1,7 +1,7 @@
 from logging import getLogger, INFO
 from urllib.error import URLError, HTTPError
 import json
-import boto3
+#import boto3
 import os
 from base64 import b64decode
 import logging
@@ -68,14 +68,52 @@ def slackNotifyMessage(channel, webhook, msg):
     return response
 
 def lambda_handler(event, context):
-    event_name = event['detail']['eventName']
-    region = event['detail']['awsRegion']
-    source_ip = event['detail']['sourceIPAddress']
-    user_name = event.get('detail').get('userIdentity').get('arn')
-    account_id = event['account']
-    msg = "\n" + "Login Log" + "\n" + "Event Name :" + event_name + "\n" + "Account ID : " + account_id + "\n" + "Region : " + region + "\n" + "User Name : " + str(user_name) + "\n" + "Source IP : " + source_ip
+
+    event_name = event.get('detail').get('eventName', 'eventName_notfound')
+    region = event.get('detail').get('awsRegion', 'awsRegion_notfound')
+    source_ip = event.get('detail').get('sourceIPAddress', 'sourceIPAddress_notfound')
+    user_name = event.get('detail').get('userIdentity').get('userName', 'userName_notfound')
+    account_id = event.get('account', 'account_notfound')
+    msg = "\n" + "Login Log" + "\n" + "Event Name : " + event_name + "\n" + "Account ID : " + account_id + "\n" + "Region : " + region + "\n" + "User Name : " + str(user_name) + "\n" + "Source IP : " + source_ip
     
     if TOKEN != 'none':
-        lineNotifyMessage(TOKEN, msg)
+        if event_name == 'CheckMfa':
+            print("Just Check Mfa")
+        if event_name == 'SwitchRole':
+            swithch_role = event.get('detail').get('additionalEventData').get('SwitchTo', 'SwitchTo_not_found')
+            msg = msg + "\n" + "Switch To : " + swithch_role
+            if swithch_role == 'SwitchTo_not_found':
+                print('SwitchTo_not_found')
+            else:
+                lineNotifyMessage(TOKEN, msg)
+        if event_name == 'ExitRole':
+            swithch_role = event.get('detail').get('additionalEventData').get('SwitchFrom', 'SwitchFrom_not_found')
+            msg = msg + "\n" + "Switch From : " + swithch_role
+            if swithch_role == 'SwitchFrom_not_found':
+                print('SwitchFrom_not_found')
+            else:
+                lineNotifyMessage(TOKEN, msg)
+        if event_name == 'ConsoleLogin':
+            msg = msg
+            lineNotifyMessage(TOKEN, msg)
     if os.environ.get('SLACK_CHANNEL_NAME') != 'none' and os.environ.get('SLACK_WEBHOOK_URL') != 'none':
-        slackNotifyMessage(os.environ.get('SLACK_CHANNEL_NAME'), os.environ.get('SLACK_WEBHOOK_URL'), msg)
+        if event_name == 'CheckMfa':
+            print("Just Check Mfa")
+        if event_name == 'SwitchRole':
+            swithch_role = event.get('detail').get('additionalEventData').get('SwitchTo', 'SwitchTo_not_found')
+            msg = msg + "\n" + "Switch To : " + swithch_role
+            if swithch_role == 'SwitchTo_not_found':
+                print('SwitchTo_not_found')
+            else:
+                slackNotifyMessage(os.environ.get('SLACK_CHANNEL_NAME'), os.environ.get('SLACK_WEBHOOK_URL'), msg)
+        if event_name == 'ExitRole':
+            swithch_role = event.get('detail').get('additionalEventData').get('SwitchFrom', 'SwitchFrom_not_found')
+            msg = msg + "\n" + "Switch From : " + swithch_role
+            if swithch_role == 'SwitchFrom_not_found':
+                print('SwitchFrom_not_found')
+            else:
+                slackNotifyMessage(os.environ.get('SLACK_CHANNEL_NAME'), os.environ.get('SLACK_WEBHOOK_URL'), msg)
+        if event_name == 'ConsoleLogin':
+            msg = msg
+            slackNotifyMessage(os.environ.get('SLACK_CHANNEL_NAME'), os.environ.get('SLACK_WEBHOOK_URL'), msg)
+        

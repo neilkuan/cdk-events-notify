@@ -15,7 +15,7 @@ test('line and slack', () => {
   expect(stack).toHaveResourceLike('AWS::Lambda::Function', {
     Code: {
       S3Bucket: {
-        Ref: 'AssetParameters8b968b75979b6cc7de5d87f7a80f5c8aaa3dca52da755a06f3020ed03beff408S3Bucket37136325',
+        Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3Bucket642DCB0A',
       },
       S3Key: {
         'Fn::Join': [
@@ -28,7 +28,7 @@ test('line and slack', () => {
                   'Fn::Split': [
                     '||',
                     {
-                      Ref: 'AssetParameters8b968b75979b6cc7de5d87f7a80f5c8aaa3dca52da755a06f3020ed03beff408S3VersionKey3F6A4D72',
+                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
                     },
                   ],
                 },
@@ -41,7 +41,7 @@ test('line and slack', () => {
                   'Fn::Split': [
                     '||',
                     {
-                      Ref: 'AssetParameters8b968b75979b6cc7de5d87f7a80f5c8aaa3dca52da755a06f3020ed03beff408S3VersionKey3F6A4D72',
+                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
                     },
                   ],
                 },
@@ -82,7 +82,7 @@ test('slack only', () => {
   expect(stack).toHaveResourceLike('AWS::Lambda::Function', {
     Code: {
       S3Bucket: {
-        Ref: 'AssetParameters8b968b75979b6cc7de5d87f7a80f5c8aaa3dca52da755a06f3020ed03beff408S3Bucket37136325',
+        Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3Bucket642DCB0A',
       },
       S3Key: {
         'Fn::Join': [
@@ -95,7 +95,7 @@ test('slack only', () => {
                   'Fn::Split': [
                     '||',
                     {
-                      Ref: 'AssetParameters8b968b75979b6cc7de5d87f7a80f5c8aaa3dca52da755a06f3020ed03beff408S3VersionKey3F6A4D72',
+                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
                     },
                   ],
                 },
@@ -108,7 +108,7 @@ test('slack only', () => {
                   'Fn::Split': [
                     '||',
                     {
-                      Ref: 'AssetParameters8b968b75979b6cc7de5d87f7a80f5c8aaa3dca52da755a06f3020ed03beff408S3VersionKey3F6A4D72',
+                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
                     },
                   ],
                 },
@@ -146,7 +146,7 @@ test('line only', () => {
   expect(stack).toHaveResourceLike('AWS::Lambda::Function', {
     Code: {
       S3Bucket: {
-        Ref: 'AssetParameters8b968b75979b6cc7de5d87f7a80f5c8aaa3dca52da755a06f3020ed03beff408S3Bucket37136325',
+        Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3Bucket642DCB0A',
       },
       S3Key: {
         'Fn::Join': [
@@ -159,7 +159,7 @@ test('line only', () => {
                   'Fn::Split': [
                     '||',
                     {
-                      Ref: 'AssetParameters8b968b75979b6cc7de5d87f7a80f5c8aaa3dca52da755a06f3020ed03beff408S3VersionKey3F6A4D72',
+                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
                     },
                   ],
                 },
@@ -172,7 +172,7 @@ test('line only', () => {
                   'Fn::Split': [
                     '||',
                     {
-                      Ref: 'AssetParameters8b968b75979b6cc7de5d87f7a80f5c8aaa3dca52da755a06f3020ed03beff408S3VersionKey3F6A4D72',
+                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
                     },
                   ],
                 },
