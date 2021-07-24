@@ -7,8 +7,16 @@
 ![PyPI](https://img.shields.io/pypi/dm/cdk-events-notify?label=pypi&color=blue)
 
 # cdk-events-notify
-cdk-events-notify is an AWS CDK Construct Library that provides you know who login in your aws console. 
-## Welcome to contribute another event notify case you want.
+`cdk-events-notify` is an AWS CDK Construct Library that provides you know who login in your aws console.
+
+## Why
+It’s just a small feature at the moment,
+Provides you to trigger Lambda Function push notifications to Line Notify or Slack when you discover Console Login event or swith role event through Cloudtrail.
+
+> Welcome to contribute another event notify case you want.
+## Overview 
+![](./images/overview.png)
+
 ### Now support
 - Line Notify
 - Slack ([webhooks](https://api.slack.com/messaging/webhooks#posting_with_webhooks))
@@ -44,8 +52,6 @@ cdk destroy
   ![](./images/line-chat.jpg)
 - slack
   ![](./images/slack.jpg)
-### Overview 
-![](./images/overview.png)
 
 ## More about EventBridge and Lambda
 - [EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/aws-events.html)

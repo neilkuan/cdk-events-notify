@@ -4,7 +4,9 @@ import * as target from '@aws-cdk/aws-events-targets';
 import * as _lambda from '@aws-cdk/aws-lambda';
 import * as logs from '@aws-cdk/aws-logs';
 import * as cdk from '@aws-cdk/core';
-
+/**
+ * slack event notify interface.
+ */
 export interface ISlackEventNotify {
   /**
    * slack Webhook Url for Lambda send message to slack.
@@ -17,18 +19,28 @@ export interface ISlackEventNotify {
 
 }
 
+/**
+ * event notify interface.
+ */
 export interface EventNotifyProps {
   /**
    * Line Notify Token for Lambda send notify permisson.
+   *
+   * @default - none
    */
   readonly lineNotifyToken?: string | undefined;
 
   /**
    * Notify target to Slack channel.
+   *
+   * @default - none
    */
   readonly slack?: ISlackEventNotify;
 }
 
+/**
+ * Event Notfiy Construct Class.
+ */
 export class EventNotify extends cdk.Construct {
   constructor(scope: cdk.Construct, id: string, props?: EventNotifyProps) {
     super(scope, id);

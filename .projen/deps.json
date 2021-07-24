@@ -2,7 +2,7 @@
   "dependencies": [
     {
       "name": "@aws-cdk/assert",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "build"
     },
     {
@@ -92,32 +92,32 @@
     },
     {
       "name": "@aws-cdk/aws-events-targets",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-events",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-logs",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "peer"
     },
     {
@@ -127,32 +127,32 @@
     },
     {
       "name": "@aws-cdk/aws-events-targets",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-events",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-lambda",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-logs",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.105.0",
+      "version": "^1.115.0",
       "type": "runtime"
     }
   ],

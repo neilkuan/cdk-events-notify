@@ -4,27 +4,27 @@
 
 Name|Description
 ----|-----------
-[EventNotify](#cdk-events-notify-eventnotify)|*No description*
+[EventNotify](#cdk-events-notify-eventnotify)|Event Notfiy Construct Class.
 
 
 **Structs**
 
 Name|Description
 ----|-----------
-[EventNotifyProps](#cdk-events-notify-eventnotifyprops)|*No description*
+[EventNotifyProps](#cdk-events-notify-eventnotifyprops)|event notify interface.
 
 
 **Interfaces**
 
 Name|Description
 ----|-----------
-[ISlackEventNotify](#cdk-events-notify-islackeventnotify)|*No description*
+[ISlackEventNotify](#cdk-events-notify-islackeventnotify)|slack event notify interface.
 
 
 
 ## class EventNotify 🔹 <a id="cdk-events-notify-eventnotify"></a>
 
-
+Event Notfiy Construct Class.
 
 __Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
 __Extends__: [Construct](#aws-cdk-core-construct)
@@ -41,8 +41,8 @@ new EventNotify(scope: Construct, id: string, props?: EventNotifyProps)
 * **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[EventNotifyProps](#cdk-events-notify-eventnotifyprops)</code>)  *No description*
-  * **lineNotifyToken** (<code>string</code>)  Line Notify Token for Lambda send notify permisson. __*Optional*__
-  * **slack** (<code>[ISlackEventNotify](#cdk-events-notify-islackeventnotify)</code>)  Notify target to Slack channel. __*Optional*__
+  * **lineNotifyToken** (<code>string</code>)  Line Notify Token for Lambda send notify permisson. __*Default*__: none
+  * **slack** (<code>[ISlackEventNotify](#cdk-events-notify-islackeventnotify)</code>)  Notify target to Slack channel. __*Default*__: none
 
 
 
@@ -50,21 +50,21 @@ new EventNotify(scope: Construct, id: string, props?: EventNotifyProps)
 ## struct EventNotifyProps 🔹 <a id="cdk-events-notify-eventnotifyprops"></a>
 
 
-
+event notify interface.
 
 
 
 Name | Type | Description 
 -----|------|-------------
-**lineNotifyToken**?🔹 | <code>string</code> | Line Notify Token for Lambda send notify permisson.<br/>__*Optional*__
-**slack**?🔹 | <code>[ISlackEventNotify](#cdk-events-notify-islackeventnotify)</code> | Notify target to Slack channel.<br/>__*Optional*__
+**lineNotifyToken**?🔹 | <code>string</code> | Line Notify Token for Lambda send notify permisson.<br/>__*Default*__: none
+**slack**?🔹 | <code>[ISlackEventNotify](#cdk-events-notify-islackeventnotify)</code> | Notify target to Slack channel.<br/>__*Default*__: none
 
 
 
 ## interface ISlackEventNotify 🔹 <a id="cdk-events-notify-islackeventnotify"></a>
 
 
-
+slack event notify interface.
 
 ### Properties
 

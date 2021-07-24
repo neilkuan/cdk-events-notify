@@ -16,7 +16,6 @@
     "bump": "npx projen bump",
     "unbump": "npx projen unbump",
     "upgrade-dependencies": "npx projen upgrade-dependencies",
-    "upgrade-projen": "npx projen upgrade-projen",
     "default": "npx projen default",
     "watch": "npx projen watch",
     "package": "npx projen package",
@@ -32,7 +31,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.105.0",
+    "@aws-cdk/assert": "^1.115.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.28.4",
@@ -55,21 +54,21 @@
     "typescript": "^3.9.10"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-events": "^1.105.0",
-    "@aws-cdk/aws-events-targets": "^1.105.0",
-    "@aws-cdk/aws-iam": "^1.105.0",
-    "@aws-cdk/aws-lambda": "^1.105.0",
-    "@aws-cdk/aws-logs": "^1.105.0",
-    "@aws-cdk/core": "^1.105.0",
+    "@aws-cdk/aws-events": "^1.115.0",
+    "@aws-cdk/aws-events-targets": "^1.115.0",
+    "@aws-cdk/aws-iam": "^1.115.0",
+    "@aws-cdk/aws-lambda": "^1.115.0",
+    "@aws-cdk/aws-logs": "^1.115.0",
+    "@aws-cdk/core": "^1.115.0",
     "constructs": "^3.2.27"
   },
   "dependencies": {
-    "@aws-cdk/aws-events": "^1.105.0",
-    "@aws-cdk/aws-events-targets": "^1.105.0",
-    "@aws-cdk/aws-iam": "^1.105.0",
-    "@aws-cdk/aws-lambda": "^1.105.0",
-    "@aws-cdk/aws-logs": "^1.105.0",
-    "@aws-cdk/core": "^1.105.0"
+    "@aws-cdk/aws-events": "^1.115.0",
+    "@aws-cdk/aws-events-targets": "^1.115.0",
+    "@aws-cdk/aws-iam": "^1.115.0",
+    "@aws-cdk/aws-lambda": "^1.115.0",
+    "@aws-cdk/aws-logs": "^1.115.0",
+    "@aws-cdk/core": "^1.115.0"
   },
   "bundledDependencies": [],
   "keywords": [
@@ -137,7 +136,7 @@
   },
   "awscdkio": {
     "twitter": "neil_kuan",
-    "announce": true
+    "announce": false
   },
   "resolutions": {
     "trim-newlines": "3.0.1"
