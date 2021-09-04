@@ -5,7 +5,7 @@ const PROJECT_DESCRIPTION = 'The Events Notify AWS Construct lib for AWS CDK';
 const project = new AwsCdkConstructLibrary({
   authorAddress: 'guan840912@gmail.com',
   authorName: 'Neil Kuan',
-  cdkVersion: '1.115.0',
+  cdkVersion: '1.121.0',
   description: PROJECT_DESCRIPTION,
   name: PROJECT_NAME,
   repository: 'https://github.com/neilkuan/cdk-events-notify.git',
@@ -18,6 +18,7 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-events',
     '@aws-cdk/aws-events-targets',
   ],
+  minNodeVersion: '12.19.0',
   autoDetectBin: false,
   depsUpgrade: DependenciesUpgradeMechanism.githubWorkflow({
     ignoreProjen: false,
