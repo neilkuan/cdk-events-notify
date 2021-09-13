@@ -1,6 +1,6 @@
 [![NPM version](https://badge.fury.io/js/cdk-events-notify.svg)](https://badge.fury.io/js/cdk-events-notify)
 [![PyPI version](https://badge.fury.io/py/cdk-events-notify.svg)](https://badge.fury.io/py/cdk-events-notify)
-![Release](https://github.com/neilkuan/cdk-s3bucket/workflows/Release/badge.svg)
+![Release](https://github.com/neilkuan/cdk-s3bucket/workflows/release/badge.svg)
 
 ![Downloads](https://img.shields.io/badge/-DOWNLOADS:-brightgreen?color=gray)
 ![npm](https://img.shields.io/npm/dt/cdk-events-notify?label=npm&color=orange)
