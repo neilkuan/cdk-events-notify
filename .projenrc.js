@@ -35,7 +35,7 @@ const project = new AwsCdkConstructLibrary({
     announce: false,
   },
   compat: true,
-  python: {
+  publishToPypi: {
     distName: PROJECT_NAME,
     module: 'cdk_events_notify',
   },
