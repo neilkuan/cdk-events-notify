@@ -35,7 +35,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.125.0",
+    "@aws-cdk/assert": "^1.134.0",
     "@types/jest": "^26.0.24",
     "@types/node": "^14.17.0",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -52,27 +52,27 @@
     "jsii-pacmak": "^1.46.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^11",
-    "projen": "^0.36.6",
+    "projen": "^0.37.0",
     "standard-version": "^9",
     "ts-jest": "^26.5.6",
     "typescript": "^3.9.10"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-events": "^1.125.0",
-    "@aws-cdk/aws-events-targets": "^1.125.0",
-    "@aws-cdk/aws-iam": "^1.125.0",
-    "@aws-cdk/aws-lambda": "^1.125.0",
-    "@aws-cdk/aws-logs": "^1.125.0",
-    "@aws-cdk/core": "^1.125.0",
+    "@aws-cdk/aws-events": "^1.134.0",
+    "@aws-cdk/aws-events-targets": "^1.134.0",
+    "@aws-cdk/aws-iam": "^1.134.0",
+    "@aws-cdk/aws-lambda": "^1.134.0",
+    "@aws-cdk/aws-logs": "^1.134.0",
+    "@aws-cdk/core": "^1.134.0",
     "constructs": "^3.2.27"
   },
   "dependencies": {
-    "@aws-cdk/aws-events": "^1.125.0",
-    "@aws-cdk/aws-events-targets": "^1.125.0",
-    "@aws-cdk/aws-iam": "^1.125.0",
-    "@aws-cdk/aws-lambda": "^1.125.0",
-    "@aws-cdk/aws-logs": "^1.125.0",
-    "@aws-cdk/core": "^1.125.0"
+    "@aws-cdk/aws-events": "^1.134.0",
+    "@aws-cdk/aws-events-targets": "^1.134.0",
+    "@aws-cdk/aws-iam": "^1.134.0",
+    "@aws-cdk/aws-lambda": "^1.134.0",
+    "@aws-cdk/aws-logs": "^1.134.0",
+    "@aws-cdk/core": "^1.134.0"
   },
   "bundledDependencies": [],
   "keywords": [
