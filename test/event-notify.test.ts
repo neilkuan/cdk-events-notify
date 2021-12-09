@@ -1,5 +1,5 @@
 import '@aws-cdk/assert/jest';
-import * as cdk from '@aws-cdk/core';
+import * as cdk from 'aws-cdk-lib';
 import { EventNotify } from '../src/index';
 
 test('line and slack', () => {
@@ -15,41 +15,9 @@ test('line and slack', () => {
   expect(stack).toHaveResourceLike('AWS::Lambda::Function', {
     Code: {
       S3Bucket: {
-        Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3Bucket642DCB0A',
+        'Fn::Sub': 'cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}',
       },
-      S3Key: {
-        'Fn::Join': [
-          '',
-          [
-            {
-              'Fn::Select': [
-                0,
-                {
-                  'Fn::Split': [
-                    '||',
-                    {
-                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              'Fn::Select': [
-                1,
-                {
-                  'Fn::Split': [
-                    '||',
-                    {
-                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        ],
-      },
+      S3Key: '87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435.zip',
     },
     Role: {
       'Fn::GetAtt': [
@@ -82,41 +50,9 @@ test('slack only', () => {
   expect(stack).toHaveResourceLike('AWS::Lambda::Function', {
     Code: {
       S3Bucket: {
-        Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3Bucket642DCB0A',
+        'Fn::Sub': 'cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}',
       },
-      S3Key: {
-        'Fn::Join': [
-          '',
-          [
-            {
-              'Fn::Select': [
-                0,
-                {
-                  'Fn::Split': [
-                    '||',
-                    {
-                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              'Fn::Select': [
-                1,
-                {
-                  'Fn::Split': [
-                    '||',
-                    {
-                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        ],
-      },
+      S3Key: '87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435.zip',
     },
     Role: {
       'Fn::GetAtt': [
@@ -131,9 +67,6 @@ test('slack only', () => {
         SLACK_CHANNEL_NAME: 'mock',
       },
     },
-    Handler: 'linenotify.lambda_handler',
-    Runtime: 'python3.8',
-    Timeout: 180,
   });
 });
 
@@ -146,41 +79,9 @@ test('line only', () => {
   expect(stack).toHaveResourceLike('AWS::Lambda::Function', {
     Code: {
       S3Bucket: {
-        Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3Bucket642DCB0A',
+        'Fn::Sub': 'cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}',
       },
-      S3Key: {
-        'Fn::Join': [
-          '',
-          [
-            {
-              'Fn::Select': [
-                0,
-                {
-                  'Fn::Split': [
-                    '||',
-                    {
-                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              'Fn::Select': [
-                1,
-                {
-                  'Fn::Split': [
-                    '||',
-                    {
-                      Ref: 'AssetParameters87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435S3VersionKey65CD780B',
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        ],
-      },
+      S3Key: '87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435.zip',
     },
     Role: {
       'Fn::GetAtt': [
@@ -195,8 +96,5 @@ test('line only', () => {
         SLACK_CHANNEL_NAME: 'none',
       },
     },
-    Handler: 'linenotify.lambda_handler',
-    Runtime: 'python3.8',
-    Timeout: 180,
   });
 });

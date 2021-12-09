@@ -14,6 +14,12 @@ It’s just a small feature at the moment,
 Provides you to trigger Lambda Function push notifications to Line Notify or Slack when you discover Console Login event or swith role event through Cloudtrail.
 
 > Welcome to contribute another event notify case you want.
+
+## !!! Usage Note !!!
+cdk-events-notify before version: 0.3.124, support aws-cdk version: 1.xxx.xxx.
+
+cdk-events-notify start at version: 2.x.x, support aws-cdk version: 2.xxx.xxx.
+
 ## Overview 
 ![](./images/overview.png)
 
@@ -31,7 +37,7 @@ Provides you to trigger Lambda Function push notifications to Line Notify or Sla
 
 ## Usage 
 ```ts
-import * as cdk from '@aws-cdk/core';
+import * as cdk from '@aws-cdk-lib';
 import { EventNotify } from 'cdk-events-notify';
 
 const app = new cdk.App();
