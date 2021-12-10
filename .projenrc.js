@@ -46,12 +46,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   rebuildBot: false,
   workflowNodeVersion: '^14.17.0',
-  // deps: [
-  //   '@aws-cdk/assert@1.134.0',
-  // ],
-  // bundledDeps: [
-  //   '@aws-cdk/assert@1.134.0',
-  // ],
 });
 project.package.addField('resolutions', {
   'trim-newlines': '3.0.1',
