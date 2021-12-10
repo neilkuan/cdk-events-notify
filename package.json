@@ -18,6 +18,7 @@
     "post-compile": "npx projen post-compile",
     "pre-compile": "npx projen pre-compile",
     "release": "npx projen release",
+    "release:cdkv1": "npx projen release:cdkv1",
     "test": "npx projen test",
     "test:update": "npx projen test:update",
     "test:watch": "npx projen test:watch",
@@ -59,12 +60,7 @@
     "aws-cdk-lib": "^2.1.0",
     "constructs": "^10.0.5"
   },
-  "dependencies": {
-    "@aws-cdk/assert": "^2.1.0"
-  },
-  "bundledDependencies": [
-    "@aws-cdk/assert"
-  ],
+  "bundledDependencies": [],
   "keywords": [
     "aws",
     "cdk",

@@ -1,5 +1,5 @@
-import '@aws-cdk/assert/jest';
 import * as cdk from 'aws-cdk-lib';
+import * as assertions from 'aws-cdk-lib/assertions';
 import { EventNotify } from '../src/index';
 
 test('line and slack', () => {
@@ -12,19 +12,8 @@ test('line and slack', () => {
       slackWebhookUrl: 'mock',
     },
   });
-  expect(stack).toHaveResourceLike('AWS::Lambda::Function', {
-    Code: {
-      S3Bucket: {
-        'Fn::Sub': 'cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}',
-      },
-      S3Key: '87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435.zip',
-    },
-    Role: {
-      'Fn::GetAtt': [
-        'testinglambdafunServiceRole62CC8ACF',
-        'Arn',
-      ],
-    },
+
+  assertions.Template.fromStack(stack).hasResourceProperties('AWS::Lambda::Function', {
     Environment: {
       Variables: {
         LINE_NOTIFY_TOKEN: 'mock',
@@ -47,19 +36,7 @@ test('slack only', () => {
       slackWebhookUrl: 'mock',
     },
   });
-  expect(stack).toHaveResourceLike('AWS::Lambda::Function', {
-    Code: {
-      S3Bucket: {
-        'Fn::Sub': 'cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}',
-      },
-      S3Key: '87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435.zip',
-    },
-    Role: {
-      'Fn::GetAtt': [
-        'testinglambdafunServiceRole62CC8ACF',
-        'Arn',
-      ],
-    },
+  assertions.Template.fromStack(stack).hasResourceProperties('AWS::Lambda::Function', {
     Environment: {
       Variables: {
         LINE_NOTIFY_TOKEN: 'none',
@@ -76,19 +53,7 @@ test('line only', () => {
   new EventNotify(stack, 'testing', {
     lineNotifyToken: 'mock',
   });
-  expect(stack).toHaveResourceLike('AWS::Lambda::Function', {
-    Code: {
-      S3Bucket: {
-        'Fn::Sub': 'cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}',
-      },
-      S3Key: '87b9cfa46edf9eec80d013291c5bdae277c3f45d382ff3919f8b76335730f435.zip',
-    },
-    Role: {
-      'Fn::GetAtt': [
-        'testinglambdafunServiceRole62CC8ACF',
-        'Arn',
-      ],
-    },
+  assertions.Template.fromStack(stack).hasResourceProperties('AWS::Lambda::Function', {
     Environment: {
       Variables: {
         LINE_NOTIFY_TOKEN: 'mock',

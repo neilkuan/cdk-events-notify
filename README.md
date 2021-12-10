@@ -15,11 +15,6 @@ Provides you to trigger Lambda Function push notifications to Line Notify or Sla
 
 > Welcome to contribute another event notify case you want.
 
-## !!! Usage Note !!!
-cdk-events-notify before version: 0.3.124, support aws-cdk version: 1.xxx.xxx.
-
-cdk-events-notify start at version: 2.x.x, support aws-cdk version: 2.xxx.xxx.
-
 ## Overview 
 ![](./images/overview.png)
 
@@ -34,6 +29,21 @@ cdk-events-notify start at version: 2.x.x, support aws-cdk version: 2.xxx.xxx.
 > more see [line notify docs](https://notify-bot.line.me/doc/en/) 
 
 ![](./images/access-token.png)
+
+## Install
+```bash
+Use the npm dist tag to opt in CDKv1 or CDKv2:
+
+// for CDKv2
+npm install cdk-events-notify
+or
+npm install cdk-events-notify@latest
+
+// for CDKv1
+npm install cdk-events-notify@cdkv1 
+```
+## 💡💡💡 please click [here](https://github.com/neilkuan/cdk-events-notify/tree/cdkv1#readme), if you are using aws-cdk v1.x.x version.💡💡💡
+
 
 ## Usage 
 ```ts

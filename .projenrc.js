@@ -5,11 +5,22 @@ const PROJECT_DESCRIPTION = 'The Events Notify AWS Construct lib for AWS CDK';
 const project = new awscdk.AwsCdkConstructLibrary({
   authorAddress: 'guan840912@gmail.com',
   authorName: 'Neil Kuan',
-  cdkVersion: '2.1.0',
   description: PROJECT_DESCRIPTION,
   name: PROJECT_NAME,
   repository: 'https://github.com/neilkuan/cdk-events-notify.git',
   keywords: ['aws', 'cdk', 'events', 'notify'],
+  cdkVersion: '2.1.0',
+  /**
+   * we default release the main branch(cdkv2) with major version 2.
+   */
+  majorVersion: 2,
+  defaultReleaseBranch: 'main',
+  /**
+    * we also release the cdkv1 branch with major version 1.
+    */
+  releaseBranches: {
+    cdkv1: { npmDistTag: 'cdkv1', majorVersion: 1 },
+  },
   autoDetectBin: false,
   depsUpgradeOptions: {
     ignoreProjen: false,
@@ -34,10 +45,13 @@ const project = new awscdk.AwsCdkConstructLibrary({
   stability: 'experimental',
   defaultReleaseBranch: 'main',
   rebuildBot: false,
-  bundledDeps: [
-    '@aws-cdk/assert',
-  ],
   workflowNodeVersion: '^14.17.0',
+  // deps: [
+  //   '@aws-cdk/assert@1.134.0',
+  // ],
+  // bundledDeps: [
+  //   '@aws-cdk/assert@1.134.0',
+  // ],
 });
 project.package.addField('resolutions', {
   'trim-newlines': '3.0.1',
