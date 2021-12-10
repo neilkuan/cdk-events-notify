@@ -47,7 +47,7 @@ npm install cdk-events-notify@cdkv1
 
 ## Usage 
 ```ts
-import * as cdk from '@aws-cdk-lib';
+import * as cdk from 'aws-cdk-lib';
 import { EventNotify } from 'cdk-events-notify';
 
 const app = new cdk.App();
