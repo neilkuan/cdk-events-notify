@@ -1,5 +1,5 @@
-import * as cdk from 'aws-cdk-lib';
-import * as assertions from 'aws-cdk-lib/assertions';
+import * as assertions from '@aws-cdk/assertions';
+import * as cdk from '@aws-cdk/core';
 import { EventNotify } from '../src/index';
 
 test('line and slack', () => {

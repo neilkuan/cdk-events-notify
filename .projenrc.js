@@ -9,7 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: PROJECT_NAME,
   repository: 'https://github.com/neilkuan/cdk-events-notify.git',
   keywords: ['aws', 'cdk', 'events', 'notify'],
-  cdkVersion: '2.1.0',
+  cdkVersion: '1.134.0',
   /**
    * we default release the main branch(cdkv2) with major version 2.
    */
@@ -46,12 +46,18 @@ const project = new awscdk.AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   rebuildBot: false,
   workflowNodeVersion: '^14.17.0',
-  // deps: [
-  //   '@aws-cdk/assert@1.134.0',
-  // ],
-  // bundledDeps: [
-  //   '@aws-cdk/assert@1.134.0',
-  // ],
+  deps: [
+    '@aws-cdk/aws-events@^1.134.0',
+    '@aws-cdk/aws-events-targets@^1.134.0',
+    '@aws-cdk/aws-lambda@^1.134.0',
+    '@aws-cdk/aws-logs@^1.134.0',
+    '@aws-cdk/core@^1.134.0',
+    '@aws-cdk/assertions@^1.134.0',
+    'constructs',
+  ],
+  peerDeps: [
+    '@aws-cdk/core@^1.134.0',
+  ],
 });
 project.package.addField('resolutions', {
   'trim-newlines': '3.0.1',

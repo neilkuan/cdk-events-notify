@@ -26,8 +26,8 @@ Name|Description
 
 Event Notfiy Construct Class.
 
-__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
-__Extends__: [Construct](#constructs-construct)
+__Implements__: [IConstruct](#constructs-iconstruct), [IConstruct](#aws-cdk-core-iconstruct), [IConstruct](#constructs-iconstruct), [IDependable](#aws-cdk-core-idependable)
+__Extends__: [Construct](#aws-cdk-core-construct)
 
 ### Initializer
 
@@ -38,7 +38,7 @@ __Extends__: [Construct](#constructs-construct)
 new EventNotify(scope: Construct, id: string, props?: EventNotifyProps)
 ```
 
-* **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
+* **scope** (<code>[Construct](#aws-cdk-core-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[EventNotifyProps](#cdk-events-notify-eventnotifyprops)</code>)  *No description*
   * **lineNotifyToken** (<code>string</code>)  Line Notify Token for Lambda send notify permisson. __*Default*__: none

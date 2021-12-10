@@ -1,10 +1,9 @@
 import * as path from 'path';
-import * as cdk from 'aws-cdk-lib';
-import * as events from 'aws-cdk-lib/aws-events';
-import * as target from 'aws-cdk-lib/aws-events-targets';
-import * as _lambda from 'aws-cdk-lib/aws-lambda';
-import * as logs from 'aws-cdk-lib/aws-logs';
-import { Construct } from 'constructs';
+import * as events from '@aws-cdk/aws-events';
+import * as target from '@aws-cdk/aws-events-targets';
+import * as _lambda from '@aws-cdk/aws-lambda';
+import * as logs from '@aws-cdk/aws-logs';
+import * as cdk from '@aws-cdk/core';
 /**
  * slack event notify interface.
  */
@@ -42,8 +41,8 @@ export interface EventNotifyProps {
 /**
  * Event Notfiy Construct Class.
  */
-export class EventNotify extends Construct {
-  constructor(scope: Construct, id: string, props?: EventNotifyProps) {
+export class EventNotify extends cdk.Construct {
+  constructor(scope: cdk.Construct, id: string, props?: EventNotifyProps) {
     super(scope, id);
 
     if (!props?.lineNotifyToken && !props?.slack) {
