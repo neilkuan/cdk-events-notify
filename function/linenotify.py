@@ -74,7 +74,18 @@ def lambda_handler(event, context):
     source_ip = event.get('detail').get('sourceIPAddress', 'sourceIPAddress_notfound')
     user_name = event.get('detail').get('userIdentity').get('userName', 'userName_notfound')
     account_id = event.get('account', 'account_notfound')
-    msg = "\n" + "Login Log" + "\n" + "Event Name : " + event_name + "\n" + "Account ID : " + account_id + "\n" + "Region : " + region + "\n" + "User Name : " + str(user_name) + "\n" + "Source IP : " + source_ip
+    response_elements = event.get('detail').get('responseElements', 'responseElements_notfound')
+
+    msg = f'''
+    Login Log
+    Event Name : {event_name}
+    Account ID : {account_id}
+    Region : {region}
+    User Name : {user_name}
+    Source IP : {source_ip}
+    Action :
+        {list(response_elements.keys())[0]} {list(response_elements.values())[0]}
+    '''
     
     if TOKEN != 'none':
         if event_name == 'CheckMfa':
