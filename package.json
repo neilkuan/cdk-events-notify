@@ -71,7 +71,7 @@
     "@aws-cdk/aws-lambda": "^1.134.0",
     "@aws-cdk/aws-logs": "^1.134.0",
     "@aws-cdk/core": "^1.134.0",
-    "constructs": "^3.3.204"
+    "constructs": "^3.3.205"
   },
   "keywords": [
     "aws",
