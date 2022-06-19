@@ -45,6 +45,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   defaultReleaseBranch: 'main',
   rebuildBot: false,
   workflowNodeVersion: '^14.17.0',
+  typescriptVersion: '4.6.2',
 });
 project.package.addField('resolutions', {
   'trim-newlines': '3.0.1',
