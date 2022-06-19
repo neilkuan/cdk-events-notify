@@ -57,6 +57,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   peerDeps: [
     '@aws-cdk/core@^1.134.0',
   ],
+  typescriptVersion: '4.6.2',
 });
 project.package.addField('resolutions', {
   'trim-newlines': '3.0.1',
