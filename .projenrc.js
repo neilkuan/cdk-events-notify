@@ -57,10 +57,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
   peerDeps: [
     '@aws-cdk/core@^1.134.0',
   ],
-  typescriptVersion: '4.6.2',
+  typescriptVersion: '3.9.10',
 });
+
 project.package.addField('resolutions', {
   'trim-newlines': '3.0.1',
+  'got': '12.3.0',
 });
 const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log', 'coverage', '.env', '.DS_Store'];
 project.gitignore.exclude(...common_exclude);
