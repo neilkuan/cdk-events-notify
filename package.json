@@ -54,7 +54,7 @@
     "jsii-docgen": "^1.8.110",
     "jsii-pacmak": "^1.79.0",
     "npm-check-updates": "^16",
-    "projen": "0.70.5",
+    "projen": "0.70.6",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "3.9.10"
@@ -70,7 +70,7 @@
     "@aws-cdk/aws-lambda": "^1.134.0",
     "@aws-cdk/aws-logs": "^1.134.0",
     "@aws-cdk/core": "^1.134.0",
-    "constructs": "^3.4.290"
+    "constructs": "^3.4.291"
   },
   "keywords": [
     "aws",
