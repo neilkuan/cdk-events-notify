@@ -44,7 +44,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   stability: 'experimental',
   defaultReleaseBranch: 'main',
   rebuildBot: false,
-  workflowNodeVersion: '^14.17.0',
+  workflowNodeVersion: '^16.20.0',
   typescriptVersion: '^4.9',
 });
 
