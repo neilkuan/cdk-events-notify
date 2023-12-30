@@ -22,7 +22,7 @@ test('line and slack', () => {
       },
     },
     Handler: 'linenotify.lambda_handler',
-    Runtime: 'python3.8',
+    Runtime: 'python3.12',
     Timeout: 180,
   });
 });

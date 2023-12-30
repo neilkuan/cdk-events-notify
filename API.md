@@ -41,7 +41,7 @@ new EventNotify(scope: Construct, id: string, props?: EventNotifyProps)
 * **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
 * **id** (<code>string</code>)  *No description*
 * **props** (<code>[EventNotifyProps](#cdk-events-notify-eventnotifyprops)</code>)  *No description*
-  * **lineNotifyToken** (<code>string</code>)  Line Notify Token for Lambda send notify permisson. __*Default*__: none
+  * **lineNotifyToken** (<code>string</code>)  Line Notify Token for Lambda send notify permission. __*Default*__: none
   * **slack** (<code>[ISlackEventNotify](#cdk-events-notify-islackeventnotify)</code>)  Notify target to Slack channel. __*Default*__: none
 
 
@@ -56,7 +56,7 @@ event notify interface.
 
 Name | Type | Description 
 -----|------|-------------
-**lineNotifyToken**?🔹 | <code>string</code> | Line Notify Token for Lambda send notify permisson.<br/>__*Default*__: none
+**lineNotifyToken**?🔹 | <code>string</code> | Line Notify Token for Lambda send notify permission.<br/>__*Default*__: none
 **slack**?🔹 | <code>[ISlackEventNotify](#cdk-events-notify-islackeventnotify)</code> | Notify target to Slack channel.<br/>__*Default*__: none
 
 
