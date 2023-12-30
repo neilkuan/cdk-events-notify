@@ -79,8 +79,10 @@ def lambda_handler(event, context):
         user_name = user_identity.get('userName', 'userName_notfound')
     elif user_identity_type == 'AssumedRole':
         user_name = user_identity.get('principalId', 'userName_notfound')
+    elif user_identity_type == 'Root':
+        user_name = user_identity.get('arn', 'root_name_notfound')
     else:
-        user_name = f"{user_identity.get('userName')} {user_identity.get('principalId')}"
+        user_name = f"{user_identity.get('userName')} {user_identity.get('principalId')} {user_identity.get('arn')}"
     account_id = event.get('account', 'account_notfound')
     response_elements = event.get('detail').get('responseElements', 'responseElements_notfound')
 
