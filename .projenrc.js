@@ -9,7 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: PROJECT_NAME,
   repository: 'https://github.com/neilkuan/cdk-events-notify.git',
   keywords: ['aws', 'cdk', 'events', 'notify'],
-  cdkVersion: '2.12.0',
+  cdkVersion: '2.117.0',
   /**
    * we default release the main branch(cdkv2) with major version 2.
    */

@@ -2,7 +2,7 @@ import * as path from 'path';
 import * as cdk from 'aws-cdk-lib';
 import * as events from 'aws-cdk-lib/aws-events';
 import * as target from 'aws-cdk-lib/aws-events-targets';
-import * as _lambda from 'aws-cdk-lib/aws-lambda';
+import * as lambda from 'aws-cdk-lib/aws-lambda';
 import * as logs from 'aws-cdk-lib/aws-logs';
 import { Construct } from 'constructs';
 /**
@@ -25,7 +25,7 @@ export interface ISlackEventNotify {
  */
 export interface EventNotifyProps {
   /**
-   * Line Notify Token for Lambda send notify permisson.
+   * Line Notify Token for Lambda send notify permission.
    *
    * @default - none
    */
@@ -50,10 +50,10 @@ export class EventNotify extends Construct {
       throw new Error('Please input lineNotifyToken or slack options');
     }
 
-    const lambdaFun = new _lambda.Function(this, 'lambda_fun', {
+    const lambdaFun = new lambda.Function(this, 'lambda_fun', {
       handler: 'linenotify.lambda_handler',
-      code: _lambda.Code.fromAsset(path.join(__dirname, '../function') ),
-      runtime: _lambda.Runtime.PYTHON_3_8,
+      code: lambda.Code.fromAsset(path.join(__dirname, '../function') ),
+      runtime: lambda.Runtime.PYTHON_3_12,
       timeout: cdk.Duration.minutes(3),
       logRetention: logs.RetentionDays.THREE_DAYS,
       environment: {

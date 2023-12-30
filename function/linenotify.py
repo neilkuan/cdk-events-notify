@@ -68,11 +68,19 @@ def slackNotifyMessage(channel, webhook, msg):
     return response
 
 def lambda_handler(event, context):
-
     event_name = event.get('detail').get('eventName', 'eventName_notfound')
     region = event.get('detail').get('awsRegion', 'awsRegion_notfound')
     source_ip = event.get('detail').get('sourceIPAddress', 'sourceIPAddress_notfound')
-    user_name = event.get('detail').get('userIdentity').get('userName', 'userName_notfound')
+    ## Check user_identity and type
+    user_identity = event.get('detail').get('userIdentity')
+    user_identity_type = event.get('detail').get('userIdentity').get('type')
+    user_name = 'None'
+    if user_identity_type == 'IAMUser':
+        user_name = user_identity.get('userName', 'userName_notfound')
+    elif user_identity_type == 'AssumedRole':
+        user_name = user_identity.get('principalId', 'userName_notfound')
+    else:
+        user_name = f"{user_identity.get('userName')} {user_identity.get('principalId')}"
     account_id = event.get('account', 'account_notfound')
     response_elements = event.get('detail').get('responseElements', 'responseElements_notfound')
 
