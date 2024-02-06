@@ -9,7 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: PROJECT_NAME,
   repository: 'https://github.com/neilkuan/cdk-events-notify.git',
   keywords: ['aws', 'cdk', 'events', 'notify'],
-  cdkVersion: '1.134.0',
+  cdkVersion: '1.201.0',
   /**
    * we default release the main branch(cdkv2) with major version 2.
    */
@@ -57,7 +57,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   peerDeps: [
     '@aws-cdk/core@^1.134.0',
   ],
-  typescriptVersion: '^4.9',
+  typescriptVersion: '^5',
+  jsiiVersion: '5.3.x',
+  minNodeVersion: '20.10.0',
+  workflowNodeVersion: '20.10.0',
 });
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log', 'coverage', '.env', '.DS_Store'];
