@@ -9,7 +9,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: PROJECT_NAME,
   repository: 'https://github.com/neilkuan/cdk-events-notify.git',
   keywords: ['aws', 'cdk', 'events', 'notify'],
-  cdkVersion: '2.117.0',
+  cdkVersion: '2.126.0',
   /**
    * we default release the main branch(cdkv2) with major version 2.
    */
@@ -44,8 +44,14 @@ const project = new awscdk.AwsCdkConstructLibrary({
   stability: 'experimental',
   defaultReleaseBranch: 'main',
   rebuildBot: false,
-  workflowNodeVersion: '^16.20.0',
-  typescriptVersion: '^4.9',
+  devDeps: [
+    'ts-jest@29.1.2',
+    'jsii-rosetta@5.0.x',
+  ],
+  minNodeVersion: '20.10.0',
+  workflowNodeVersion: '20.10.0',
+  typescriptVersion: '^5',
+  jsiiVersion: '5.3.x',
 });
 
 
