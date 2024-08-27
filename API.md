@@ -1,78 +1,197 @@
-# API Reference
+# API Reference <a name="API Reference" id="api-reference"></a>
 
-**Classes**
+## Constructs <a name="Constructs" id="Constructs"></a>
 
-Name|Description
-----|-----------
-[EventNotify](#cdk-events-notify-eventnotify)|Event Notfiy Construct Class.
-
-
-**Structs**
-
-Name|Description
-----|-----------
-[EventNotifyProps](#cdk-events-notify-eventnotifyprops)|event notify interface.
-
-
-**Interfaces**
-
-Name|Description
-----|-----------
-[ISlackEventNotify](#cdk-events-notify-islackeventnotify)|slack event notify interface.
-
-
-
-## class EventNotify 🔹 <a id="cdk-events-notify-eventnotify"></a>
+### EventNotify <a name="EventNotify" id="cdk-events-notify.EventNotify"></a>
 
 Event Notfiy Construct Class.
 
-__Implements__: [IConstruct](#constructs-iconstruct), [IDependable](#constructs-idependable)
-__Extends__: [Construct](#constructs-construct)
+#### Initializers <a name="Initializers" id="cdk-events-notify.EventNotify.Initializer"></a>
 
-### Initializer
+```typescript
+import { EventNotify } from 'cdk-events-notify'
 
-
-
-
-```ts
 new EventNotify(scope: Construct, id: string, props?: EventNotifyProps)
 ```
 
-* **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
-* **id** (<code>string</code>)  *No description*
-* **props** (<code>[EventNotifyProps](#cdk-events-notify-eventnotifyprops)</code>)  *No description*
-  * **lineNotifyToken** (<code>string</code>)  Line Notify Token for Lambda send notify permission. __*Default*__: none
-  * **slack** (<code>[ISlackEventNotify](#cdk-events-notify-islackeventnotify)</code>)  Notify target to Slack channel. __*Default*__: none
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk-events-notify.EventNotify.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#cdk-events-notify.EventNotify.Initializer.parameter.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#cdk-events-notify.EventNotify.Initializer.parameter.props">props</a></code> | <code><a href="#cdk-events-notify.EventNotifyProps">EventNotifyProps</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="cdk-events-notify.EventNotify.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="cdk-events-notify.EventNotify.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+##### `props`<sup>Optional</sup> <a name="props" id="cdk-events-notify.EventNotify.Initializer.parameter.props"></a>
+
+- *Type:* <a href="#cdk-events-notify.EventNotifyProps">EventNotifyProps</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk-events-notify.EventNotify.toString">toString</a></code> | Returns a string representation of this construct. |
+
+---
+
+##### `toString` <a name="toString" id="cdk-events-notify.EventNotify.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#cdk-events-notify.EventNotify.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+
+---
+
+##### ~~`isConstruct`~~ <a name="isConstruct" id="cdk-events-notify.EventNotify.isConstruct"></a>
+
+```typescript
+import { EventNotify } from 'cdk-events-notify'
+
+EventNotify.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+###### `x`<sup>Required</sup> <a name="x" id="cdk-events-notify.EventNotify.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk-events-notify.EventNotify.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="cdk-events-notify.EventNotify.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
 
 
+## Structs <a name="Structs" id="Structs"></a>
 
-
-## struct EventNotifyProps 🔹 <a id="cdk-events-notify-eventnotifyprops"></a>
-
+### EventNotifyProps <a name="EventNotifyProps" id="cdk-events-notify.EventNotifyProps"></a>
 
 event notify interface.
 
+#### Initializer <a name="Initializer" id="cdk-events-notify.EventNotifyProps.Initializer"></a>
+
+```typescript
+import { EventNotifyProps } from 'cdk-events-notify'
+
+const eventNotifyProps: EventNotifyProps = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk-events-notify.EventNotifyProps.property.lineNotifyToken">lineNotifyToken</a></code> | <code>string</code> | Line Notify Token for Lambda send notify permission. |
+| <code><a href="#cdk-events-notify.EventNotifyProps.property.slack">slack</a></code> | <code><a href="#cdk-events-notify.ISlackEventNotify">ISlackEventNotify</a></code> | Notify target to Slack channel. |
+
+---
+
+##### `lineNotifyToken`<sup>Optional</sup> <a name="lineNotifyToken" id="cdk-events-notify.EventNotifyProps.property.lineNotifyToken"></a>
+
+```typescript
+public readonly lineNotifyToken: string;
+```
+
+- *Type:* string
+- *Default:* none
+
+Line Notify Token for Lambda send notify permission.
+
+---
+
+##### `slack`<sup>Optional</sup> <a name="slack" id="cdk-events-notify.EventNotifyProps.property.slack"></a>
+
+```typescript
+public readonly slack: ISlackEventNotify;
+```
+
+- *Type:* <a href="#cdk-events-notify.ISlackEventNotify">ISlackEventNotify</a>
+- *Default:* none
+
+Notify target to Slack channel.
+
+---
 
 
-Name | Type | Description 
------|------|-------------
-**lineNotifyToken**?🔹 | <code>string</code> | Line Notify Token for Lambda send notify permission.<br/>__*Default*__: none
-**slack**?🔹 | <code>[ISlackEventNotify](#cdk-events-notify-islackeventnotify)</code> | Notify target to Slack channel.<br/>__*Default*__: none
+## Protocols <a name="Protocols" id="Protocols"></a>
 
+### ISlackEventNotify <a name="ISlackEventNotify" id="cdk-events-notify.ISlackEventNotify"></a>
 
-
-## interface ISlackEventNotify 🔹 <a id="cdk-events-notify-islackeventnotify"></a>
-
+- *Implemented By:* <a href="#cdk-events-notify.ISlackEventNotify">ISlackEventNotify</a>
 
 slack event notify interface.
 
-### Properties
 
+#### Properties <a name="Properties" id="Properties"></a>
 
-Name | Type | Description 
------|------|-------------
-**slackChannelName**🔹 | <code>string</code> | slack Channel Name for Lambda send message to slack.
-**slackWebhookUrl**🔹 | <code>string</code> | slack Webhook Url for Lambda send message to slack.
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#cdk-events-notify.ISlackEventNotify.property.slackChannelName">slackChannelName</a></code> | <code>string</code> | slack Channel Name for Lambda send message to slack. |
+| <code><a href="#cdk-events-notify.ISlackEventNotify.property.slackWebhookUrl">slackWebhookUrl</a></code> | <code>string</code> | slack Webhook Url for Lambda send message to slack. |
 
+---
 
+##### `slackChannelName`<sup>Required</sup> <a name="slackChannelName" id="cdk-events-notify.ISlackEventNotify.property.slackChannelName"></a>
+
+```typescript
+public readonly slackChannelName: string;
+```
+
+- *Type:* string
+
+slack Channel Name for Lambda send message to slack.
+
+---
+
+##### `slackWebhookUrl`<sup>Required</sup> <a name="slackWebhookUrl" id="cdk-events-notify.ISlackEventNotify.property.slackWebhookUrl"></a>
+
+```typescript
+public readonly slackWebhookUrl: string;
+```
+
+- *Type:* string
+
+slack Webhook Url for Lambda send message to slack.
+
+---
 
