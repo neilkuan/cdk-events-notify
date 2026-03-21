@@ -41,6 +41,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: PROJECT_NAME,
     module: 'cdk_events_notify',
   },
+  npmProvenance: true,
+  npmTokenSecret: '',
+  npmTrustedPublishing: true,
   stability: 'experimental',
   defaultReleaseBranch: 'main',
   rebuildBot: false,
@@ -54,6 +57,16 @@ const project = new awscdk.AwsCdkConstructLibrary({
   jsiiVersion: '5.9.x',
 });
 
+
+// Add registry-url to release_npm job's setup-node step for OIDC trusted publishing
+project.tryFindObjectFile('.github/workflows/release.yml')
+  .addOverride('jobs.release_npm.steps.0.with.registry-url', 'https://registry.npmjs.org');
+
+// Add provenance to publishConfig in package.json
+project.package.addField('publishConfig', {
+  access: 'public',
+  provenance: true,
+});
 
 const common_exclude = ['cdk.out', 'cdk.context.json', 'yarn-error.log', 'coverage', '.env', '.DS_Store'];
 project.gitignore.exclude(...common_exclude);
