@@ -21,6 +21,8 @@ Provides you to trigger Lambda Function push notifications to Slack when you dis
 ### Now support
 - Slack ([webhooks](https://api.slack.com/messaging/webhooks#posting_with_webhooks))
 
+> **Breaking Change**: Line Notify support has been removed since [#2663](https://github.com/neilkuan/cdk-events-notify/pull/2663). Line Notify service was officially shut down by LINE on 2025-03-31, so this library now supports Slack only. If you need Line Notify functionality, please pin to a version prior to this change.
+
 ## You need enable one `Management events` in your account.
 > more see https://aws.amazon.com/tw/cloudtrail/pricing/
 ![](./images/management-events.png)
