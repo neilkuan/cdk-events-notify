@@ -12,7 +12,7 @@ test('slack notify', () => {
     },
   });
 
-  assertions.Template.fromStack(stack).hasResourceProperties('AWS::Lambda::Function', {
+  assertions.Template.fromStack(stack).hasResourceProperties('AWS::Lambda::Function', assertions.Match.objectLike({
     Environment: {
       Variables: {
         SLACK_WEBHOOK_URL: 'mock',
@@ -20,7 +20,7 @@ test('slack notify', () => {
       },
     },
     Handler: 'notify.lambda_handler',
-    Runtime: 'python3.12',
+    Runtime: 'python3.13',
     Timeout: 180,
-  });
+  }));
 });

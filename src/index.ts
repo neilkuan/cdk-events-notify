@@ -40,7 +40,7 @@ export class EventNotify extends Construct {
     const lambdaFun = new lambda.Function(this, 'lambda_fun', {
       handler: 'notify.lambda_handler',
       code: lambda.Code.fromAsset(path.join(__dirname, '../function') ),
-      runtime: lambda.Runtime.PYTHON_3_12,
+      runtime: lambda.Runtime.PYTHON_3_13,
       timeout: cdk.Duration.minutes(3),
       logRetention: logs.RetentionDays.THREE_DAYS,
       environment: {
