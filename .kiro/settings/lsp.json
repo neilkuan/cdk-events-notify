@@ -1,0 +1,57 @@
+{
+  "languages": {
+    "typescript": {
+      "name": "typescript-language-server",
+      "command": "typescript-language-server",
+      "args": [
+        "--stdio"
+      ],
+      "file_extensions": [
+        "ts",
+        "js",
+        "tsx",
+        "jsx"
+      ],
+      "project_patterns": [
+        "package.json",
+        "tsconfig.json"
+      ],
+      "exclude_patterns": [
+        "**/node_modules/**",
+        "**/dist/**"
+      ],
+      "multi_workspace": false,
+      "initialization_options": {
+        "preferences": {
+          "disableSuggestions": false
+        }
+      },
+      "request_timeout_secs": 60
+    },
+    "python": {
+      "name": "pyright",
+      "command": "pyright-langserver",
+      "args": [
+        "--stdio"
+      ],
+      "file_extensions": [
+        "py"
+      ],
+      "project_patterns": [
+        "pyproject.toml",
+        "setup.py",
+        "requirements.txt",
+        "pyrightconfig.json"
+      ],
+      "exclude_patterns": [
+        "**/__pycache__/**",
+        "**/venv/**",
+        "**/.venv/**",
+        "**/.pytest_cache/**"
+      ],
+      "multi_workspace": false,
+      "initialization_options": {},
+      "request_timeout_secs": 60
+    }
+  }
+}
