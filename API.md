@@ -11,7 +11,7 @@ Event Notfiy Construct Class.
 ```typescript
 import { EventNotify } from 'cdk-events-notify'
 
-new EventNotify(scope: Construct, id: string, props?: EventNotifyProps)
+new EventNotify(scope: Construct, id: string, props: EventNotifyProps)
 ```
 
 | **Name** | **Type** | **Description** |
@@ -34,7 +34,7 @@ new EventNotify(scope: Construct, id: string, props?: EventNotifyProps)
 
 ---
 
-##### `props`<sup>Optional</sup> <a name="props" id="cdk-events-notify.EventNotify.Initializer.parameter.props"></a>
+##### `props`<sup>Required</sup> <a name="props" id="cdk-events-notify.EventNotify.Initializer.parameter.props"></a>
 
 - *Type:* <a href="#cdk-events-notify.EventNotifyProps">EventNotifyProps</a>
 
@@ -157,32 +157,17 @@ const eventNotifyProps: EventNotifyProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#cdk-events-notify.EventNotifyProps.property.lineNotifyToken">lineNotifyToken</a></code> | <code>string</code> | Line Notify Token for Lambda send notify permission. |
 | <code><a href="#cdk-events-notify.EventNotifyProps.property.slack">slack</a></code> | <code><a href="#cdk-events-notify.ISlackEventNotify">ISlackEventNotify</a></code> | Notify target to Slack channel. |
 
 ---
 
-##### `lineNotifyToken`<sup>Optional</sup> <a name="lineNotifyToken" id="cdk-events-notify.EventNotifyProps.property.lineNotifyToken"></a>
-
-```typescript
-public readonly lineNotifyToken: string;
-```
-
-- *Type:* string
-- *Default:* none
-
-Line Notify Token for Lambda send notify permission.
-
----
-
-##### `slack`<sup>Optional</sup> <a name="slack" id="cdk-events-notify.EventNotifyProps.property.slack"></a>
+##### `slack`<sup>Required</sup> <a name="slack" id="cdk-events-notify.EventNotifyProps.property.slack"></a>
 
 ```typescript
 public readonly slack: ISlackEventNotify;
 ```
 
 - *Type:* <a href="#cdk-events-notify.ISlackEventNotify">ISlackEventNotify</a>
-- *Default:* none
 
 Notify target to Slack channel.
 
