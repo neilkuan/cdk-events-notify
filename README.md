@@ -10,8 +10,8 @@
 `cdk-events-notify` is an AWS CDK Construct Library that provides you know who login in your aws console.
 
 ## Why
-It’s just a small feature at the moment,
-Provides you to trigger Lambda Function push notifications to Line Notify or Slack when you discover Console Login event or swith role event through Cloudtrail.
+It's just a small feature at the moment,
+Provides you to trigger Lambda Function push notifications to Slack when you discover Console Login event or switch role event through Cloudtrail.
 
 > Welcome to contribute another event notify case you want.
 
@@ -19,27 +19,19 @@ Provides you to trigger Lambda Function push notifications to Line Notify or Sla
 ![](./images/overview.png)
 
 ### Now support
-- Line Notify
 - Slack ([webhooks](https://api.slack.com/messaging/webhooks#posting_with_webhooks))
 
 ## You need enable one `Management events` in your account.
 > more see https://aws.amazon.com/tw/cloudtrail/pricing/
 ![](./images/management-events.png)
-# You need Line Notify access token
-> more see [line notify docs](https://notify-bot.line.me/doc/en/) 
-
-![](./images/access-token.png)
 
 ## Install
 ```bash
-Use the npm dist tag to opt in CDKv1 or CDKv2:
-
 // for CDKv2
 npm install cdk-events-notify
 or
 npm install cdk-events-notify@latest 
 ```
-## 💡💡💡 please click [here](https://github.com/neilkuan/cdk-events-notify/tree/cdkv1#readme), if you are using aws-cdk v1.x.x version.💡💡💡
 
 
 ## Usage 
@@ -49,7 +41,12 @@ import { EventNotify } from 'cdk-events-notify';
 
 const app = new cdk.App();
 const stack = new cdk.Stack(app, 'integ-stack', { env });
-new EventNotify(stack, 'LineEventNotify', { lineNotifyToken: process.env.LINE_NOTIFY_TOKEN });
+new EventNotify(stack, 'SlackEventNotify', {
+  slack: {
+    slackChannelName: 'your-channel-name',
+    slackWebhookUrl: 'https://hooks.slack.com/services/xxx/xxx/xxx',
+  },
+});
 
 ```
 ### To deploy
@@ -61,8 +58,6 @@ cdk deploy
 cdk destroy
 ```
 ### Finally
-- line
-  ![](./images/line-chat.jpg)
 - slack
   ![](./images/slack.jpg)
 

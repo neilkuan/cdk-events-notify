@@ -14,8 +14,7 @@ const app = new cdk.App();
       account: process.env.CDK_DEFAULT_ACCOUNT,
     },
   });
-  new EventNotify(stack, 'LineslackEventNotify', {
-    lineNotifyToken: process.env.LINE_NOTIFY_TOKEN,
+  new EventNotify(stack, 'SlackEventNotify', {
     slack: {
       slackChannelName: `${process.env.SLACK_CHANNEL_NAME}`,
       slackWebhookUrl: `${process.env.SLACK_WEBHOOK_URL}`,
